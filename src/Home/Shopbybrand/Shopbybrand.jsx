@@ -32,7 +32,8 @@ const BrandSlider = () => {
             <Link
               key={index}
               to={`/brand/${brand.brand.toLowerCase().replace(/\s+/g, "")}`}
-              className="block"
+              className="brand-card-animate block transition-transform duration-300"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <BrandCard
                 img={brand.img}
@@ -52,7 +53,8 @@ const BrandSlider = () => {
             <Link
               key={index}
               to={`/brand/${brand.brand.toLowerCase().replace(/\s+/g, "")}`}
-              className="block"
+              className="brand-card-animate block transition-transform duration-300"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <BrandCard key={index} img={brand.img} brand={brand.brand} />
             </Link>
@@ -61,10 +63,10 @@ const BrandSlider = () => {
       </div>
 
       <div className="mt-10 grid gap-4 md:grid-cols-2">
-        <img src={p1} alt="poster1" className="h-100 w-full rounded-3xl object-cover shadow-sm" />
-        <img src={p2} alt="poster2" className="h-100 w-full rounded-3xl object-cover shadow-sm" />
-        <img src={p3} alt="poster3" className="h-64 w-full rounded-3xl object-cover shadow-sm" />
-        <img src={p4} alt="poster4" className="h-64 w-full rounded-3xl object-cover shadow-sm" />
+        <img src={p1} alt="poster1" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '100ms' }} />
+        <img src={p2} alt="poster2" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '200ms' }} />
+        <img src={p3} alt="poster3" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '300ms' }} />
+        <img src={p4} alt="poster4" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '400ms' }} />
       </div>
     </div>
   );
