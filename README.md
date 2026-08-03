@@ -185,7 +185,7 @@ Future versions of this project may include:
 
 # 👨‍💻 Developer
 
-Developed by **Kishor M**
+Developed by Benji
 
 Frontend Developer | React Enthusiast
 
