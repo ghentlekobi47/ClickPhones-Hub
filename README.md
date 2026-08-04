@@ -7,7 +7,13 @@ This project was created to **gain practical experience with React concepts** by
 
 ---
 
-# 🚀 Features
+# � Helpful Links
+
+- [View project files](./)
+
+---
+
+# �🚀 Features
 
 - 📱 Browse smartphones by different brands
 - 🔍 View detailed product specifications
