@@ -41,22 +41,15 @@ const Footer = () => {
               Ghana<br />
               kumasi
             </p>
+
             <p className="mt-2 text-sm text-slate-400">
-              📞 <a href="tel:0599576819" className="transition hover:text-white">0599576819</a>
-            </p>
-            <p className="text-sm text-slate-400">
-              📞 <a href="tel:0207785725" className="transition hover:text-white">0207785725</a>
-            </p>
-            <p className="mt-2 text-sm text-slate-400">
-              ✉️ <a href="mailto:benboateng384@gmail.com" className="transition hover:text-white">benboateng384@gmail.com</a>
+              🌐 <a href="https://clicl-phones-hub.vercel.app/" target="_blank" rel="noreferrer" className="transition hover:text-white">Visit Website</a>
             </p>
           </div>
         </div>
 
-        <div className="pt-4 text-center text-sm text-slate-400">
-          © 2026 ClickPhones Hub | Designed & Developed by
-          <a href="https://www.linkedin.com/in/benboat384/" className="ml-1 font-semibold text-white hover:text-rose-400">benboateng</a>
-        </div>
+    
+      
       </div>
     </footer>
   );

@@ -7,6 +7,7 @@ import Footer from './Home/Footer/Footer'
 import BuyNow from './Components/BuyNow/BuyNow'
 import CartPage from './CartPage/CartPage'
 import BrandSlider from './Home/Shopbybrand/Shopbybrand'
+import Subscribe from './Home/Subscribe/Subscribe'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Route path='/brand/:brandName' element={<Brand/>} />
       <Route path='/product/:id' element = {<BuyNow/>} />
       <Route path='/cart' element = {<CartPage/>} />
+      <Route path='/subscribe' element = {<Subscribe/>} />
     </Routes>
      <Footer/>
     </BrowserRouter>
