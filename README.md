@@ -7,13 +7,13 @@ This project was created to **gain practical experience with React concepts** by
 
 ---
 
-# � Helpful Links
+# Helpful Links
 
-- [View project files](./)
+- [View GitHub Repository](https://github.com/ghentlekobi47/ClickPhones-Hub)
 
 ---
 
-# �🚀 Features
+# Features
 
 - 📱 Browse smartphones by different brands
 - 🔍 View detailed product specifications
