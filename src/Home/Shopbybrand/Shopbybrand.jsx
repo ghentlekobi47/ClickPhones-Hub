@@ -1,7 +1,5 @@
-import infinix from "./Images/infinix.png";
 import iphone from "./Images/iphone.png";
 import xiaomi from "./Images/mi.png";
-import oneplus from "./Images/oneplus.png";
 import realme from "./Images/realme.png";
 import samsung from './Images/samsung.png';
 import vivo from './Images/vivo.png';
@@ -10,18 +8,16 @@ import p2 from './Images/poster2.jpg'
 import p3 from './Images/poster3.jpg'
 import p4 from './Images/poster4.jpg'
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars -- used as <motion.div>
 import BrandCard from './BrandCard';
 
 const BrandSlider = () => {
   const brands = [
-    { img: infinix, brand: "Infinix" },
-    { img: iphone, brand: "Apple" },
-    { img: xiaomi, brand: "Xiaomi" },
-    { img: oneplus, brand: "OnePlus" },
-    { img: realme, brand: "Realme" },
-    { img: samsung, brand: "Samsung" },
-    { img: vivo, brand: "Vivo" },
+    { img: iphone, brand: "Apple", slug: "apple" },
+    { img: xiaomi, brand: "Xiaomi", slug: "redmi" },
+    { img: realme, brand: "Realme", slug: "realme" },
+    { img: samsung, brand: "Samsung", slug: "samsung" },
+    { img: vivo, brand: "Vivo", slug: "vivo" },
   ]
 
   return (
@@ -44,18 +40,18 @@ const BrandSlider = () => {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
-          className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-7"
+          className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
         >
           {brands.map((brand, index) => (
             <motion.div
-              key={index}
+              key={brand.slug}
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.45, delay: 0.05 * index, ease: 'easeOut' }}
               whileHover={{ scale: 1.04, x: 4 }}
             >
               <Link
-                to={`/brand/${brand.brand.toLowerCase().replace(/\s+/g, "")}`}
+                to={`/brand/${brand.slug}`}
                 className="block"
               >
                 <BrandCard
@@ -75,22 +71,22 @@ const BrandSlider = () => {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {brands.map((brand, index) => (
             <Link
-              key={index}
-              to={`/brand/${brand.brand.toLowerCase().replace(/\s+/g, "")}`}
+              key={brand.slug}
+              to={`/brand/${brand.slug}`}
               className="brand-card-animate block transition-transform duration-300"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <BrandCard key={index} img={brand.img} brand={brand.brand} />
+              <BrandCard img={brand.img} brand={brand.brand} />
             </Link>
           ))}
         </div>
       </div>
 
       <div className="mt-10 grid gap-4 md:grid-cols-2">
-        <img src={p1} alt="poster1" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '100ms' }} />
-        <img src={p2} alt="poster2" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '200ms' }} />
-        <img src={p3} alt="poster3" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '300ms' }} />
-        <img src={p4} alt="poster4" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '400ms' }} />
+        <img src={p1} alt="Phone promotion poster 1" loading="lazy" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '100ms' }} />
+        <img src={p2} alt="Phone promotion poster 2" loading="lazy" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '200ms' }} />
+        <img src={p3} alt="Phone promotion poster 3" loading="lazy" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '300ms' }} />
+        <img src={p4} alt="Phone promotion poster 4" loading="lazy" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '400ms' }} />
       </div>
     </div>
   );

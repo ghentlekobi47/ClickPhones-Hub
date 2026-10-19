@@ -18,8 +18,7 @@ const Footer = () => {
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
               <li><Link to="/brand/apple" className="transition hover:text-white">Apple</Link></li>
               <li><Link to="/brand/samsung" className="transition hover:text-white">Samsung</Link></li>
-              <li><Link to="/brand/xiaomi" className="transition hover:text-white">Xiaomi</Link></li>
-              <li><Link to="/brand/oneplus" className="transition hover:text-white">OnePlus</Link></li>
+              <li><Link to="/brand/redmi" className="transition hover:text-white">Xiaomi</Link></li>
               <li><Link to="/brand/realme" className="transition hover:text-white">Realme</Link></li>
               <li><Link to="/brand/vivo" className="transition hover:text-white">Vivo</Link></li>
             </ul>
@@ -28,7 +27,7 @@ const Footer = () => {
           <div>
             <h5 className="text-sm font-semibold tracking-wide text-white">Quick Links</h5>
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
-              <li><Link to="/home" className="transition hover:text-white">Home</Link></li>
+              <li><Link to="/"className="transition hover:text-white">Home</Link></li>
               <li><Link to="/brand" className="transition hover:text-white">Brand</Link></li>
               <li><Link to="/cart" className="transition hover:text-white">Cart</Link></li>
             </ul>
