@@ -3,10 +3,6 @@ import xiaomi from "./Images/mi.png";
 import realme from "./Images/realme.png";
 import samsung from './Images/samsung.png';
 import vivo from './Images/vivo.png';
-import p1 from './Images/poster1.jpg'
-import p2 from './Images/poster2.jpg'
-import p3 from './Images/poster3.jpg'
-import p4 from './Images/poster4.jpg'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars -- used as <motion.div>
 import BrandCard from './BrandCard';
@@ -68,7 +64,7 @@ const BrandSlider = () => {
 
       <div className="mt-10">
         <h1 className="text-center text-3xl font-semibold text-slate-800">Shop By Brand</h1>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {brands.map((brand, index) => (
             <Link
               key={brand.slug}
@@ -80,13 +76,6 @@ const BrandSlider = () => {
             </Link>
           ))}
         </div>
-      </div>
-
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
-        <img src={p1} alt="Phone promotion poster 1" loading="lazy" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '100ms' }} />
-        <img src={p2} alt="Phone promotion poster 2" loading="lazy" className="brand-card-animate h-100 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '200ms' }} />
-        <img src={p3} alt="Phone promotion poster 3" loading="lazy" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '300ms' }} />
-        <img src={p4} alt="Phone promotion poster 4" loading="lazy" className="brand-card-animate h-64 w-full rounded-3xl object-cover shadow-sm" style={{ animationDelay: '400ms' }} />
       </div>
     </div>
   );
